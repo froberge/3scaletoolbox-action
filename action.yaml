@@ -11,6 +11,9 @@ inputs:
   api-file:
     description: 'The API file you need to upload'
     required: true
+  devkey-token:
+    description: 'The key for the test developer for 3scales, required for the userkey pair security mode.'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -18,3 +21,4 @@ runs:
     - ${{ inputs.threeScale-token }}
     - ${{ inputs.threeScale-domain }}
     - ${{ inputs.api-file }}
+    - ${{ inputs.devkey-token }}
