@@ -10,12 +10,7 @@ RUN apk add --no-cache build-base libxml2-dev libxslt-dev
 # Install the 3scale toolbox
 RUN gem install 3scale_toolbox
 
-# Copy your 3scale credentials file to the container
-#COPY openapi.json /app/openapi.json
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
-
-# Set the entrypoint to the 3scale toolbox
-#ENTRYPOINT ["3scale"]
 
