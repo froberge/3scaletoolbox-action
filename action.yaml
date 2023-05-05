@@ -1,9 +1,12 @@
 name: install-3scale-toolbox
 description: This is an action that install 3scale toolbox to update and API
 author: Felix Roberge
-branding:
-  icon: 'thumbs-up'
-  color: 'white'
+inputs:
+  api-to-upload:
+    description: 'The API you need to upload'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.api-to-upload }}
