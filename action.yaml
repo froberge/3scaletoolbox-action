@@ -5,16 +5,16 @@ inputs:
   threeScale-token: 
     description: 'The 3 scale token use to connect'
     required: true
-  threeScale-url: 
-    description: 'The 3 scale url'
+  threeScale-domain: 
+    description: 'The 3 scale domain'
     required: true
   api-file:
-    description: 'The API you need to upload'
+    description: 'The API file you need to upload'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.threeScale-token }}
-    - ${{ inputs.threeScale-url }}
+    - ${{ inputs.threeScale-domain }}
     - ${{ inputs.api-file }}
