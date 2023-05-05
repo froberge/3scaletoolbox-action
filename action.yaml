@@ -2,11 +2,19 @@ name: install-3scale-toolbox
 description: This is an action that install 3scale toolbox to update and API
 author: Felix Roberge
 inputs:
-  api-to-upload:
+  threeScale-token: 
+    description: 'The 3 scale token use to connect'
+    required: true
+  threeScale-url: 
+    description: 'The 3 scale url'
+    required: true
+  api-file:
     description: 'The API you need to upload'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.api-to-upload }}
+    - ${{ inputs.threeScale-token }}
+    - ${{ inputs.threeScale-url }}
+    - ${{ inputs.api-file }}
