@@ -13,7 +13,9 @@ Refer to the [`podman push`](http://docs.podman.io/en/latest/markdown/podman-man
 | 3Sacle Token	| The Token to connect to the 3Scale API management console. | **Required** 
 | 3Sacle Domain	| The domain name where 3sacle run. | **Required** 
 | API File	| The openAPI file that need to  be uploaded | **Required** 
-| Dev Key Token | The token for the dev, use in the userkey pair security mode| **NOT Required** |
+| Dev Key Token | The token for the dev, use in the userkey pair security mode. Send a null paramenter if you don't need it.| **Required** |
+| Private base URL | the URL needed to reach the backend. Send a null paramenter if you don't need it.| **Required** |
+| Public base URL | Public URL added to the API domain. Send a null paramenter if you don't need it.| **Required** |
 
 
 
