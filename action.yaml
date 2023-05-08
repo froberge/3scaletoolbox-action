@@ -14,6 +14,13 @@ inputs:
   devkey-token:
     description: 'The key for the test developer for 3scales, required for the userkey pair security mode.'
     required: false
+  basepath-private:
+    description: 'Private url for the api backend'
+    required: false
+  basepath-public:
+    description: 'Publicurl for the api'
+    required: false
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -22,3 +29,5 @@ runs:
     - ${{ inputs.threeScale-domain }}
     - ${{ inputs.api-file }}
     - ${{ inputs.devkey-token }}
+    - ${{ inputs.basepath-private }}
+    - ${{ inputs.basepath-public }}
