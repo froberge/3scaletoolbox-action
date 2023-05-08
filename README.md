@@ -1,7 +1,7 @@
 # Import to 3Scale
 
 
-Import-to-3scale is a GitHub Action for importing an openapi json file into 3Scale using the 3sacle toolbox.
+Import-to-3scale is a GitHub Action for importing an openapi json file into 3Scale using the [3sacle toolbox](https://github.com/3scale/3scale_toolbox).
 
 
 ## Inputs Required
